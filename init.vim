@@ -1,5 +1,6 @@
 syntax on
 
+set guicursor=
 set noerrorbells
 set tabstop=2 softtabstop=2
 set shiftwidth=2
@@ -22,6 +23,8 @@ nnoremap <leader>q :q<CR><CR>
 nnoremap <leader>w :w<CR><CR>
 nnoremap <leader>nt :NERDTree<CR><CR>
 nnoremap <F5> :UndotreeToggle<CR>
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
 
 call plug#begin('~/.vim/plugged')
 
