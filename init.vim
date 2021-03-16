@@ -56,6 +56,8 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'preservim/nerdtree'
 " undotree
 Plug 'mbbill/undotree'
+" bracey - live html, css & js
+Plug 'turbio/bracey.vim'
 
 call plug#end()
 
