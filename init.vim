@@ -1,5 +1,6 @@
 syntax on
 
+set nohlsearch
 set guicursor=
 set noerrorbells
 set tabstop=2 softtabstop=2
@@ -31,10 +32,11 @@ call plug#begin('~/.vim/plugged')
 " sintax highlight
 Plug 'sheerun/vim-polyglot'
 Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
+Plug 'maxmellon/vim-jsx-pretty'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " theme
-Plug 'tyrannicaltoucan/vim-quantum'
+" Plug 'tyrannicaltoucan/vim-quantum'
+Plug 'mhartington/oceanic-next'
 " fuzzy finder
 Plug 'ctrlpvim/ctrlp.vim'
 " auto-close brackets
@@ -57,9 +59,17 @@ Plug 'preservim/nerdtree'
 " undotree
 Plug 'mbbill/undotree'
 " bracey - live html, css & js
-Plug 'turbio/bracey.vim'
+Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
 
 call plug#end()
+
+" vim-jsx-pretty
+let g:vim_jsx_pretty_colorful_config = 1
+let g:vim_jsx_pretty_highlight_close_tag = 1
+let g:vim_jsx_pretty_template_tags = ['html', 'jsx']
+
+" bracey config
+let g:bracey_auto_start_browser = 1
 
 " fuzzy finder config
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard'] "Hide files in .gitignore
@@ -73,13 +83,27 @@ let g:ctrlp_show_hidden = 1
 nmap <silent> gd <Plug>(coc-definition)
 
 " airline theme
-let g:airline_theme='deus'
+"let g:airline_theme='deus'
+let g:airline_theme='oceanicnext'
 
 " theme
-set background=dark
-set termguicolors
-let g:quantum_italics=1
-colorscheme quantum
+"set background=dark
+"set termguicolors
+"let g:quantum_italics=1
+"colorscheme quantum
+" For Neovim 0.1.3 and 0.1.4
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+if (has("termguicolors"))
+  set termguicolors
+endif
+syntax enable
+let g:oceanic_next_terminal_bold = 1
+let g:oceanic_next_terminal_italic = 1
+colorscheme OceanicNext
+"hi Normal guibg=NONE ctermbg=NONE
+"hi LineNr guibg=NONE ctermbg=NONE
+"hi SignColumn guibg=NONE ctermbg=NONE
+"hi EndOfBuffer guibg=NONE ctermbg=NONE
 
 " Coc plugin
 let g:coc_global_extension = [ 'coc-server' ]
@@ -134,6 +158,7 @@ let g:prettier#config#semi = 'false'
 
 " Single quotes over double quotes
 let g:prettier#config#single_quote = 'true'
+let g:prettier#config#jsx_single_quote = 'true'
 
 " vim-closetag
 " filenames like *.xml, *.html, *.xhtml, ...
