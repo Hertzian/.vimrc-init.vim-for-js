@@ -16,7 +16,7 @@ set nobackup
 set undodir=~/.vim/undodir
 set undofile
 set incsearch
-set scrolloff=8
+set scrolloff=18
 set signcolumn=yes
 
 let mapleader = " "
@@ -50,6 +50,8 @@ Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 Plug 'preservim/nerdcommenter'
 " html close tag
 Plug 'alvan/vim-closetag'
+" highlight html closing tag
+Plug 'valloric/MatchTagAlways'
 " emmet
 Plug 'mattn/emmet-vim'
 " tmux 
