@@ -1,0 +1,18 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "javascript", "jsx", "html", "php"],
+  "prettier.semi": false,
+  "prettier.jsxSingleQuote": true,
+  "prettier.singleQuote": true,
+  "prettier.quoteProps": "as-needed",
+  "prettier.trailingComma": "none",
+  "prettier.overrides": [
+    {
+      "prettier.files": ["**/*.css", "**/*.scss", "**/*.html"],
+      "prettier.options": {
+        "prettier.singleQuote": false
+      }
+    }
+  ], 
+  "eslint.executeAutofix": true,
+  "eslint.autoFixOnSave": true
+}
