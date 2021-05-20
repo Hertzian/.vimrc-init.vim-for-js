@@ -1,5 +1,5 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "javascript", "jsx", "html", "php"],
+  "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "javascript", "jsx", "tsx", "typescript", "typescriptreact", "html", "php"],
   "prettier.semi": false,
   "prettier.jsxSingleQuote": true,
   "prettier.singleQuote": true,

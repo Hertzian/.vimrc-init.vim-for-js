@@ -26,8 +26,16 @@ nnoremap <leader>nt :NERDTree<CR><CR>
 nnoremap <F5> :UndotreeToggle<CR>
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
-vnoremap <silent> <leader>gd <Plug>(coc-definition)
+"vnoremap <silent> <leader>gd <Plug>(coc-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 vnoremap <leader>p <Plug>(coc-format-selected)
+"change surround
+"surround word
+nmap <silent> tt ysiw 
+"change surround
+nmap <silent> ññ cs 
+nnoremap ,b :ls<CR>:buffer<Space>
 nnoremap <C-p> :Files<CR>
 nnoremap <C-f> :Rg<CR>
 nmap <silent> gd <Plug>(coc-definition)
@@ -50,6 +58,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 " auto-close brackets
 Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-surround'
 " terminal style
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
