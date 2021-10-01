@@ -125,7 +125,7 @@ colorscheme OceanicNext
 "hi EndOfBuffer guibg=NONE ctermbg=NONE
 
 " Coc plugin
-let g:coc_global_extension = [ 'coc-server', 'coc-tsserver', 'coc-prettier', 'coc-eslint', 'coc-emmet' ]
+let g:coc_global_extension = [ 'coc-server', 'coc-tsserver', 'coc-prettier', 'coc-eslint', 'coc-emmet', 'coc-pyright' ]
 " use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
   let col = col('.') - 1
