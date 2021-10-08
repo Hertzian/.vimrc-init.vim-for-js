@@ -19,6 +19,7 @@ set incsearch
 set scrolloff=18
 set signcolumn=yes
 
+let NERDTreeShowHidden=1
 let mapleader = " "
 nnoremap <leader>q :q<CR><CR>
 nnoremap <leader>w :w<CR><CR>
