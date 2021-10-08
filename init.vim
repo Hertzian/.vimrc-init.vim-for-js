@@ -20,6 +20,7 @@ set scrolloff=18
 set signcolumn=yes
 
 let NERDTreeShowHidden=1
+let $FZF_DEFAULT_COMMAND='find -L'
 let mapleader = " "
 nnoremap <leader>q :q<CR><CR>
 nnoremap <leader>w :w<CR><CR>
