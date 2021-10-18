@@ -38,7 +38,7 @@ nmap <silent> tt ysiw
 "change surround
 nmap <silent> ññ cs 
 nnoremap ,b :ls<CR>:buffer<Space>
-nnoremap <C-p> :Files<CR>
+nnoremap <C-p> :GFiles<CR>
 nnoremap <C-f> :Rg<CR>
 nmap <silent> gd <Plug>(coc-definition)
 imap jk <Esc>
